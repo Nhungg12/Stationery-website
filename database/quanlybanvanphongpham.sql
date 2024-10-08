@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 19, 2023 lúc 05:36 PM
+-- Thời gian đã tạo: Th10 08, 2024 lúc 03:17 PM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.2.4
 
@@ -120,24 +120,25 @@ CREATE TABLE `nhanvien` (
   `NGAY_SINH` datetime DEFAULT NULL,
   `GIOI_TINH` varchar(10) DEFAULT NULL,
   `DCHI` varchar(100) DEFAULT NULL,
-  `SDT` varchar(15) DEFAULT NULL
+  `SDT` varchar(15) DEFAULT NULL,
+  `IMAGES_NV` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `nhanvien`
 --
 
-INSERT INTO `nhanvien` (`MA_NV`, `HOTEN_NV`, `NGAY_SINH`, `GIOI_TINH`, `DCHI`, `SDT`) VALUES
-('NV001', 'Trần Thị Cẩm Nhung', '2004-08-30 00:00:00', 'Nữ', 'Số 10, Đường Nguyễn Du, Phường 6, Quận 1, TP.HCM', '0928375643'),
-('NV002', 'Ngô Thị Trâm Anh', '2004-08-28 00:00:00', 'Nữ', 'Số 20, Đường Lê Lợi, Phường 2, Quận 2, TP.HCM', '0977563421'),
-('NV003', 'Lê Nhựt Huy', '2004-09-20 00:00:00', 'Nam', 'Số 30, Đường Nguyễn Thị Minh Khai, Phường 3, Quận 3, TP.HCM', '0943041275'),
-('NV004', 'Nguyễn Thanh Tùng', '2000-03-10 00:00:00', 'Nam', 'Số 40, Đường Hai Bà Trưng, Phường 4, Quận 4, TP.HCM', '0932817659'),
-('NV005', 'Võ Ngọc Trâm', '2002-07-20 00:00:00', 'Nữ', 'Số 50, Đường Phan Đăng Lưu, Phường 5, Quận 5, TP.HCM', '0822198325'),
-('NV006', 'Lý Gia Bảo', '1999-04-12 00:00:00', 'Nam', 'Số 60, Đường Lý Tự Trọng, Phường 6, Quận 6, TP.HCM', '0543128974'),
-('NV007', 'Huỳnh Quốc Đại', '2000-06-18 00:00:00', 'Nam', 'Số 70, Đường Võ Thị Sáu, Phường 7, Quận 7, TP.HCM', '0812948332'),
-('NV008', 'Võ Văn Nguyên', '2001-07-20 00:00:00', 'Nam', 'Số 80, Đường Lý Thường Kiệt, Phường 8, Quận 8, TP.HCM', '0689451290'),
-('NV009', 'Trần Tấn Đạt', '2002-04-19 00:00:00', 'Nam', 'Số 90, Đường Nguyễn Thị Định, Phường 9, Quận 9, TP.HCM', '0031893412'),
-('NV010', 'Mạch Kỳ Bảo', '1999-09-12 00:00:00', 'Nam', 'Số 100, Đường Trần Não, Phường 10, Quận 10, TP.HCM', '0456731290');
+INSERT INTO `nhanvien` (`MA_NV`, `HOTEN_NV`, `NGAY_SINH`, `GIOI_TINH`, `DCHI`, `SDT`, `IMAGES_NV`) VALUES
+('NV001', 'Trần Thị Cẩm Nhung', '2004-08-30 00:00:00', 'Nữ', 'Số 10, Đường Nguyễn Du, Phường 6, Quận 1, TP.HCM', '0928375643', 'nv1.jpg'),
+('NV002', 'Ngô Thị Trâm Anh', '2004-08-28 00:00:00', 'Nữ', 'Số 20, Đường Lê Lợi, Phường 2, Quận 2, TP.HCM', '0977563421', 'nv3.jpg'),
+('NV003', 'Lê Nhựt Huy', '2004-09-20 00:00:00', 'Nam', 'Số 30, Đường Nguyễn Thị Minh Khai, Phường 3, Quận 3, TP.HCM', '0943041275', 'nv02.jpg'),
+('NV004', 'Nguyễn Thanh Tùng', '2000-03-10 00:00:00', 'Nam', 'Số 40, Đường Hai Bà Trưng, Phường 4, Quận 4, TP.HCM', '0932817659', 'nv4.jpg'),
+('NV005', 'Võ Ngọc Trâm', '2002-07-20 00:00:00', 'Nữ', 'Số 50, Đường Phan Đăng Lưu, Phường 5, Quận 5, TP.HCM', '0822198325', 'nv5.jpg'),
+('NV006', 'Lý Gia Bảo', '1999-04-12 00:00:00', 'Nam', 'Số 60, Đường Lý Tự Trọng, Phường 6, Quận 6, TP.HCM', '0543128974', 'nv9.jpg'),
+('NV007', 'Huỳnh Quốc Đại', '2000-06-18 00:00:00', 'Nam', 'Số 70, Đường Võ Thị Sáu, Phường 7, Quận 7, TP.HCM', '0812948332', 'nv7.jpg'),
+('NV008', 'Võ Văn Nguyên', '2001-07-20 00:00:00', 'Nam', 'Số 80, Đường Lý Thường Kiệt, Phường 8, Quận 8, TP.HCM', '0689451290', 'nv8.jpg'),
+('NV009', 'Trần Tấn Đạt', '2002-04-19 00:00:00', 'Nam', 'Số 90, Đường Nguyễn Thị Định, Phường 9, Quận 9, TP.HCM', '0031893412', 'nv10.jpg'),
+('NV010', 'Mạch Kỳ Bảo', '1999-09-12 00:00:00', 'Nam', 'Số 100, Đường Trần Não, Phường 10, Quận 10, TP.HCM', '0456731290', 'nv11.jpg');
 
 -- --------------------------------------------------------
 
@@ -151,24 +152,25 @@ CREATE TABLE `sanpham` (
   `PHAN_LOAI` varchar(30) DEFAULT NULL,
   `DON_VI_TINH` varchar(20) DEFAULT NULL,
   `DON_GIA_NHAP` int(11) DEFAULT NULL,
-  `SO_LUONG_NHAP` int(11) DEFAULT NULL
+  `SO_LUONG_NHAP` int(11) DEFAULT NULL,
+  `IMAGES` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `sanpham`
 --
 
-INSERT INTO `sanpham` (`MA_SP`, `TEN_SP`, `PHAN_LOAI`, `DON_VI_TINH`, `DON_GIA_NHAP`, `SO_LUONG_NHAP`) VALUES
-('SP001', 'Sổ tay mini hoạt hình dễ thương', 'Giấy viết', 'Cuốn', 30000, 100),
-('SP002', 'Bút đánh dấu hai đầu màu Graffiti', 'Bút viết', 'Cây', 14000, 50),
-('SP003', 'Túi đựng mỹ phẩm, văn phòng phẩm', 'Vật dụng văn phòng', 'Túi', 3000, 80),
-('SP004', 'Túi đựng văn phòng phẩm bằng nhựa', 'Vật dụng văn phòng', 'Túi', 3000, 120),
-('SP005', 'Vở viết kẻ ngang nhiều hình', 'Vật dụng văn phòng', 'Cuốn', 6000, 100),
-('SP006', 'Bìa kẹp tài liệu', 'Vật dụng văn phòng', 'Tệp', 40000, 150),
-('SP007', 'Máy tính mini gấu bỏ túi dễ thương', 'Vật dụng học tập', 'Cái', 15000, 40),
-('SP008', 'bút highlight pastel dạ quang ghi nhớ', 'Bút viết', 'Cây', 8000, 80),
-('SP009', 'Nhãn dán tiêu dùng trong văn phòng', 'Vật dụng văn phòng', 'Nhãn', 4000, 30),
-('SP010', '9 cây bút mực nhiều màu xinh xắn', 'Bút viết', 'Bó', 20000, 10);
+INSERT INTO `sanpham` (`MA_SP`, `TEN_SP`, `PHAN_LOAI`, `DON_VI_TINH`, `DON_GIA_NHAP`, `SO_LUONG_NHAP`, `IMAGES`) VALUES
+('SP001', 'Sổ tay mini hoạt hình dễ thương', 'Giấy viết', 'Cuốn', 30000, 100, 'sp1.jfif'),
+('SP002', 'Bút đánh dấu hai đầu màu Graffiti', 'Bút viết', 'Cây', 14000, 50, 'sp2.jfif'),
+('SP003', 'Túi đựng mỹ phẩm, văn phòng phẩm', 'Vật dụng văn phòng', 'Túi', 3000, 80, 'sp3.jfif'),
+('SP004', 'Túi đựng văn phòng phẩm bằng nhựa', 'Vật dụng văn phòng', 'Túi', 3000, 120, 'sp4.jfif'),
+('SP005', 'Vở viết kẻ ngang nhiều hình', 'Vật dụng văn phòng', 'Cuốn', 6000, 100, 'sp5.jfif'),
+('SP006', 'Bìa kẹp tài liệu', 'Vật dụng văn phòng', 'Tệp', 40000, 150, 'sp6.jfif'),
+('SP007', 'Máy tính mini gấu bỏ túi dễ thương', 'Vật dụng học tập', 'Cái', 15000, 40, 'sp7.jfif'),
+('SP008', 'bút highlight pastel dạ quang ghi nhớ', 'Bút viết', 'Cây', 8000, 80, 'sp8.jfif'),
+('SP009', 'Nhãn dán tiêu dùng trong văn phòng', 'Vật dụng văn phòng', 'Nhãn', 4000, 30, 'sp9.jfif'),
+('SP010', '9 cây bút mực nhiều màu xinh xắn', 'Bút viết', 'Bó', 20000, 10, 'sp10.jfif');
 
 --
 -- Chỉ mục cho các bảng đã đổ
